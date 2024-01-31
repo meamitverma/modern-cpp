@@ -31,7 +31,7 @@ class iFlightStatus {
 
 class JetAirways {
     private:
-    std::vector<class iFlightStatus* > users;
+    std::vector< iFlightStatus* > users;
 
     public:
     // register
