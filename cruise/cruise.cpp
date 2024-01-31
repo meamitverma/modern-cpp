@@ -1,4 +1,5 @@
 #include<iostream>
+#define CARDNO "123"
 
 enum class FoodPreference { VEG, NON_VEG }; 
 
@@ -19,10 +20,23 @@ class BookingService : Cruise {
         if (user->getAge() < 18) {  
             std::cout << "Not eligible to travel." << std::endl;
             exit(0);
+            return false;
         }
-f
+
         std::cout << "User registration successfull" << std::endl;
+        return true;
     }
+
+    bool pay(std::string card_no) {
+        if (card_no != CARDNO) {
+            std::cout << "Wrong card number provided." << std::endl;
+            return false;
+            exit(0);
+        }
+
+        std::cout << "Payment successfull" << std::endl;
+
+    }    
     
     
 };
