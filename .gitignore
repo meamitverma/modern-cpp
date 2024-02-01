@@ -1,4 +1,6 @@
-*.exe
 .vscode
-*.out
 tempCodeRunnerFile.*
+# Executables
+*.exe
+*.out
+*.app
