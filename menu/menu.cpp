@@ -1,4 +1,5 @@
 #include<iostream>
+#include<algorithm>
 #include<vector>
 
 class interfaceComponent {
@@ -95,21 +96,22 @@ class Menu : public Composite{
         }
 
         std::cout << "Directory " << s << " not found in " << name << std::endl;
-        exit(1); // dont use
-        // return nullptr;
+        // exit(1); // dont use
+        return nullptr;
     }
 
-    void remove(std::string s) {
-        std::vector< interfaceComponent*>::iterator it = files.begin();
+    void remove(interfaceComponent *ic) {
+        // std::vector< interfaceComponent*>::iterator it = files.begin();
         // points to the first element of the vector
-        for (int index = 0; index < files.size(); index++, it++) {
-            if (s == files[index]->getName()) {
-                files.erase(it);
-            }
-        }
+        // for (int index = 0; index < files.size(); index++, it++) {
+        //     if (s == files[index]->getName()) {
+        //         files.erase(it);
+        //     }
+        // }
 
-        // auto it = std::find(files.begin(), files.end(), interfaceComponent);
-        // files.erase(it);
+        auto it = std::find(files.begin(), files.end(), ic);
+        if(it != files.end())
+            files.erase(it);
     }
 };
 
@@ -127,7 +129,7 @@ int main(int argv, char *argc[]) {
     m.GetHandle("File")->AddComp("Run");
     m.GetHandle("File")->GetHandle("Run")->AddLeaf("Compile");
     m.GetHandle("File")->GetHandle("Run")->AddLeaf("build");
-    m.GetHandle("File")->remove("Open");
+    m.GetHandle("File")->remove(m.GetHandle("Open"));
 
 
     Composite *mgetHandle = m.GetHandle("File");
