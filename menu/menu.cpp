@@ -112,7 +112,7 @@ class Menu : public Composite{
         auto it = std::find(files.begin(), files.end(), ic);
         if(it != files.end())
             files.erase(it);
-    }
+    }         
 };
 
 
