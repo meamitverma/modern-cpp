@@ -12,7 +12,8 @@ int (*MyFnPtr)(int x, int y) = add;
 
 // passing function reference as argument
 // functional composition
-int resultOfCalculation(int (*OP)(int, int), int x, int y) {
+// standard way of declaring a function
+constexpr auto resultOfCalculation(int (*OP)(int, int), int x, int y) -> decltype((*OP)(x, y)) {
     return  (*OP)(x, y);
 }
 
