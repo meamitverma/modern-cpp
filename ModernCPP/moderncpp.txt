@@ -1,0 +1,29 @@
+Data types
+alignment
+c++ vs asm using godbolt.org
+const vs constexpr
+structural binding
+changes in if and switch
+aggregate extension vs constructor
+initialiser list -> use 
+Null Vs nullptr -> use nullptr
+Various castings vs any
+auto deducing
+decltype
+template inheritance, CRTP, covariant
+trailing return types
+functional composition from ground zero creating our own STL fr //
+    vs std::bindingt
+type_traits nested traits
+how requires  smells getting it right using concept requires // 
+inheritance of class template
+how type traits can help us with templates
+type traits vs concepts, resume
+using filter transform drop on a vector Bad and a Good approach
+Functional composition:
+    stdLLcompose, std::for_each, std::count_if, std:: //
+        std:: transform
+
+const and constexpr are diferent
+const -> cannot change value
+constexpr -> value can be changed
