@@ -52,6 +52,17 @@ constexpr auto resultOfCalculation_3(
     return OP(x, y); // invokable
 }
 
+// version 4
+template <typename FN, typename... Args>
+constexpr auto resultOfCalculation_4(
+    const FN &OP,
+    Args... args
+    ) -> decltype(OP( args... ))
+{
+
+    return OP( args... ); // invokable
+}
+
 // compose(add, mul, sub, div, 12, 32);
 
 int main()
