@@ -17,6 +17,17 @@ constexpr auto resultOfCalculation(int (*OP)(int, int), int x, int y) -> decltyp
     return  (*OP)(x, y);
 }
 
+template<typename FN, typename T1, typename T2>
+constexpr auto resultOfCalculation(
+    const FN& OP,
+    const T1& x,
+    const T2 y
+) -> decltype((*OP)(x, y)) {
+    return OP(x, y);
+}
+
+// compose(add, mul, sub, div, 12, 32);
+
 int main() {
 
     // outdated way of calling
@@ -24,6 +35,9 @@ int main() {
     
     int res = resultOfCalculation(add, 2, 5);
     std::cout << res << std::endl;
+
+    int res2= resultOfCalculation(add, 300, 300);
+    std::cout << res2 << std::endl;
     
     return 0;
 }
