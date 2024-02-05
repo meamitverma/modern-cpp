@@ -20,7 +20,6 @@ public:
         // if not nullptr
         if (!instance)
         {
-
             instance = new Singleton;
 
             ref_count++;
@@ -38,7 +37,7 @@ public:
     }
 
     int clearRefCounter() {
-        std::cout << std::endl << "user Logged out "  << ref_count << " log." << std::endl;
+        std::cout << std::endl << "user Logged out "  << ref_count << "     log." << std::endl;
         return ref_count--;
     }
 
