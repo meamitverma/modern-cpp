@@ -8,7 +8,7 @@ auto add(T a, T b) {
 
 int main() {
 
-    auto res = add(3, 5.3f);
+    auto res = add(3.5f, 5.3f);
     std::cout << res << std::endl;
 
     return 0;
