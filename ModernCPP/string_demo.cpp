@@ -10,6 +10,23 @@ auto& increment(int &a) {
     return a;
 }
 
+struct A {double x;};
+const A* a;
+decltype (a->x) y;
+decltype (a->x) z = y;
+
+// correct function
+auto f(float x) -> decltype(x + 23.12f) {
+    return x + 23.12f;
+}
+
+
+auto getData() -> int(&)[2] {
+    int arr[] = {10, 20};
+    return arr;
+}
+
+
 int  main(int argc, const char *argv[] ){
 
     std::cout << "auto decltupe tupe traits functional composition\n";
