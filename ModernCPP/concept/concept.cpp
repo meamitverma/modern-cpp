@@ -23,7 +23,7 @@ Integral auto gcd(Integral auto a, Integral auto b) {
 template <typename T>
 concept Addable = requires(T a, T b) {
     {a + b} -> std::same_as<T>;
-}
+};
 
 template<Addable T>
 T addTwoValues(T a, T b) {
