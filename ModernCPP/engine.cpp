@@ -1,4 +1,5 @@
 #include <iostream>
+#include <type_traits>
 
 /*
     Results of a class while testing.
@@ -19,13 +20,22 @@
 // rules
 // compulsion on every classes
 // a class has requirements
-template<typename T>
+template <typename T>
 concept MandateWhileDriving = requires(T t) {
-    {t.accelerator()};
-    {t.applyBrake()};
-    {t.fuel};
-};
+    {
+        t.accelerator()
+    };
+    {
+        t.applyBrake()
+    };
+    {
+        t.fuel
+    };
 
+    requires std::is_same_v<decltype(t.fuel), float>;      // checks if the t.fuel is a float
+    requires std::convertible_to<decltype(t.fuel), float>; // is convertible to float
+    // requires ( t.fuel >= 10 );
+};
 
 class Engine
 {
@@ -44,13 +54,14 @@ public:
         std::cout << "This fun not related to engine..." << std::endl;
     }
 
-    float fuel = 6.8f;
+    float fuel = 20.5f;
 };
 
 class Car
 {
+
 public:
-    template <typename T>
+    template <MandateWhileDriving T>
     void drive(T arg)
     {
         arg.accelerator();
