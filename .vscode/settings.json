@@ -1,5 +1,5 @@
 {
-  "C_Cpp.default.compilerPath": "/usr/bin/gcc",
+  "C_Cpp.default.compilerPath": "/usr/bin/gcc-18",
   "files.associations": {
     "any": "cpp",
     "array": "cpp",
