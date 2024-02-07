@@ -51,9 +51,9 @@ int main() {
     for (const auto &value : widget.data()) {
         cout << value << " " << endl;
     }
-    
+
     cout << "Display data from rValue object" << endl;
-    for (const auto &value : Widget_vec().data()) {
+    for (auto value : Widget_vec().data()) {
         cout << value << " " << endl;
     }
 
