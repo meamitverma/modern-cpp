@@ -1,0 +1,27 @@
+Lambda vs function objects
+
+Function objects - > overlaoding
+Lambda  -> It is a variant of function(not sure)
+        -> const function object
+        -> lambdas are const by default but adding mutable keyword makes them constexpr
+
+square, circle curly brackets
+[&] (x, y) mutable throw() -> int
+
+Square bracket [] -> capture list
+-> trailing return type
+throw(): its throw an exception by default
+-> int: not necessary to mention if nothing to return
+
+
+[](){}
+
+// syntax
+[&] (x, y) mutable throw() -> int 
+{
+    int sum = x + y;
+    x = 0;
+    y = 0;
+
+    return sum;
+}
