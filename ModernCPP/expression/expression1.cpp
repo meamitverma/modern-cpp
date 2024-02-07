@@ -41,13 +41,20 @@ class MyVector {
     MyVector(MyVector&& other) : size(0), elements(nullptr) {
         std::cout << "---> Landed at rVlaue Constructor" << std::endl;
 
-        elements = other.elements;
-        size = other.size;
+        // elements = other.elements;
+        // size = other.size;
 
-        // lets clean up the memory
-        other.elements = nullptr;
-        other.size = 0;
+        // // lets clean up the memory
+        // other.elements = nullptr;
+        // other.size = 0;
+
+        // Phase II
+        // swap(other)
+        std::swap(elements, other.elements);
+        std::swap(size, other.size);
     }
+
+    
 
     int& getSize() {
         return size;
