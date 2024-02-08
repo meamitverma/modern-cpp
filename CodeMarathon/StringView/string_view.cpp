@@ -1,6 +1,7 @@
 #include<iostream>
 
 // string_view -> use it to display data, it is very lighter than std::string
+// string_view can be used in VIEW as VIEW does not have to modify anything.
 
 // regular way
 void printSubString(std::string &str) {
@@ -16,7 +17,7 @@ void printSubString(std::string_view &str) {
 
 int main() {
 
-    std::cout << "sting_view\n";
+    std::cout << "string_view\n";
     std::string str  = "Hello world";
     str[7] = '7'; // string is mutable
     std::cout << str << std::endl;
