@@ -26,14 +26,21 @@ int main() {
     // print<void(auto...)> variadic_lamda = [](auto... args){ // here the auto if function pointer->nullptr_t
     //     print(args...);
     // };
-    // (*print()) =varidic_lamda = [](auto... args){ // here the auto if function pointer->nullptr_t
+    // print<void(auto...)> variadic_lamda = [](auto... args){ // here the auto if function pointer->nullptr_t
     //     print(args...);
     // };
 
-    // calling variadic through lambda
-    auto variadic_lamda = [](auto... args){ // here the auto if function pointer->nullptr_t
+    // (*print()) =varidic_lamda = [](auto... args){ // here the auto if function pointer->nullptr_t
+    //     print(args...);
+    // };
+    void (&print)() variadic_lamda = [](auto... args){ // here the auto if function pointer->nullptr_t
         print(args...);
     };
+
+    // calling variadic through lambda
+    // auto variadic_lamda = [](auto... args){ // here the auto if function pointer->nullptr_t
+    //     print(args...);
+    // };
 
     variadic_lamda(1, "KPIT", 20, "IT");
 
