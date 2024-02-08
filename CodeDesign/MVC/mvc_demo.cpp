@@ -36,6 +36,7 @@ class CounterController {
 
     void incrementCounter() {
         model.increment();
+        // updateViews(); // bad call-> contaminated the code
     }
 
     void updateViews() const {
@@ -63,7 +64,8 @@ int main() {
 
 
     // Display the updated view
-    controller.updateViews();
+    // controller.updateViews(); // bad call -> controller should automatically calls view on update
+
 
     return 0;
 }
