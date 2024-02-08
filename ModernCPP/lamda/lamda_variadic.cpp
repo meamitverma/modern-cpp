@@ -1,4 +1,5 @@
 #include<iostream>
+#include<functional>
 
 void print(){}
 
@@ -35,9 +36,9 @@ int main() {
     //     print(args...);
     // };
 
-    // void(*)(auto) variadic_lamda = [](auto... args){ // here the auto if function pointer->nullptr_t
-    //     print(args...);
-    // };
+    std::function<void(int, std::string, int, std::string)> variadic_lambda = [](auto... args){ // here the auto if function pointer->nullptr_t
+        print(args...);
+    };
 
     // calling variadic through lambda
     auto variadic_lamda = [](auto... args){ // here the auto if function pointer->nullptr_t
