@@ -1,0 +1,50 @@
+Model, View, Controller (MVC) -> it is a tool not a program
+
+
+Model -> Every computing and processing happens here
+
+
+View -> to Display whatever provided, it has noControl
+    private:
+    int data;
+    Display()
+
+
+Controller  -> Controller should only know of Model, View  
+    Model m;
+    View v;
+    increment() -> data will be incremented in the model
+
+    m.set(i);
+
+    // one way to check the data
+    if (m.getData() != prevdata) {
+        view.display(data);
+    }
+
+
+e.g.
+
+int main() {
+    Controller ctrl(0);
+    Model m;
+    View v;
+    Controller c(m, v);
+
+    // incement data to i in the model
+    ctrl.increment(i);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+// e.g. for car
+Car, engine, IOT -> model
+Dashboard -> View
+ServiceManager -> Controller
