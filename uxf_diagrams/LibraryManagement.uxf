@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>750</x>
+      <y>570</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Store books
+-
+categoryID : string
+Author Name : string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>200</y>
+      <w>310</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Library
+-
+registeredMembers : vector&lt;Customer&gt;
+
+
+bg=GREEN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1170</x>
+      <y>350</y>
+      <w>300</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Library
+-
+registeredMembers : vector&lt;Customer&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>670</x>
+      <y>180</y>
+      <w>310</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>LibraryState
+-
+
+
+
+bg=NONE</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

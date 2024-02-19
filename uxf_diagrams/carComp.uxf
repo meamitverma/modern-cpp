@@ -1,0 +1,103 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notesccl</help_text><element><id>UMLClass</id><coordinates><x>0</x><y>410</y><w>210</w><h>240</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+Engine
+--
++ IotEngine{
+	while(true)
+		checkBattery()
+		checkFuel()
+		checkPressure( )
+		break;
+	}
+	Car State: Clutch;
+	}
++iotAcceleration
++iotClutch( )
++iotBreak( )</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>460</x><y>410</y><w>210</w><h>240</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+Break
+--
++ IotEngine( ){}
++iotAcceleration(){}
++iotClutch( )
++iotBreak( ){
+while(true)
+		check()
+		break;
+	}
+	Car State: Not Started;
+	}
+}</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>230</x><y>410</y><w>210</w><h>240</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+Accleration
+--
++ IotEngine( ){
+	}
++iotAcceleration( ){
+while(true)
+		checkSpeed()
+		checkDistance()
+		checkFuel )
+		break;
+	}
+	Car State: Break
+}
++iotClutch( )
++iotBreak( )</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>680</x><y>410</y><w>210</w><h>240</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+Clutch
+--
++ IotEngine( ){ }
++iotAcceleration(){ }
++iotClutch( ){
+	while(true)
+		check( )
+		break;
+	}
+	Car State: Acclerate;
+	}
++iotBreak( )</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>900</x><y>410</y><w>210</w><h>240</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+Clutch
+--
++ IotEngine( ){ 
+	CarState: Engine;
+}
++iotAcceleration(){ }
++iotClutch( ){ }
++iotBreak( )</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>210</y><w>210</w><h>110</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+CarState
+--
+-
++ IotEngine( )
++ IotAcceleration( )
++ IotClutch( )
++ IotBreak( )</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>80</x><y>310</y><w>410</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>390;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>310</y><w>150</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>130;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>310</y><w>70</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;50;100</additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>310</y><w>270</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;250;100</additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>310</y><w>440</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;420;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>710</y><w>190</w><h>110</h></coordinates><panel_attributes>template=1: Class
+IotEngine
+--
++checkBattery{
++check airPressure{
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>260</x><y>720</y><w>160</w><h>100</h></coordinates><panel_attributes>template=2: Class
+IotAccleration
+--
++ checkSpeed( )
++ checkDistance( )
++ checkFuel( )</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>720</y><w>160</w><h>70</h></coordinates><panel_attributes>template=3: Class
+ IotBreak
+--
++  check</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>720</x><y>720</y><w>160</w><h>70</h></coordinates><panel_attributes>template=4: Class
+IotClutch
+--
++ check</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>120</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>0</y><w>260</w><h>130</h></coordinates><panel_attributes>&lt;&lt;operation&gt;&gt;
+carMaruti
+--
+carState = notStarted
+IotEngine() = { carState.iotEngine( ) }
+IotAccelerate( ) = {carState.iotAccelerate( )}
+IotClutch( ) = { carState.iotClutch( ) }
+IotBreak( ) = { carState.iotBreak( )}
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>680</x><y>10</y><w>150</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;130;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>810</x><y>0</y><w>160</w><h>80</h></coordinates><panel_attributes>&lt;&lt;Concrete Class&gt;&gt;
+--
+carmaruti.iotClutch( );
+carMaruti.iotBreak( );
+carMaruti.iotAccelerate( );
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>260</x><y>260</y><w>100</w><h>30</h></coordinates><panel_attributes>Parent Class </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>710</x><y>30</y><w>90</w><h>40</h></coordinates><panel_attributes>Car Started</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>850</x><y>290</y><w>130</w><h>40</h></coordinates><panel_attributes>To change the state 
+of the car </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>910</x><y>680</y><w>160</w><h>70</h></coordinates><panel_attributes>static class in the 
+template class to check
+the condition for different 
+iot </panel_attributes><additional_attributes></additional_attributes></element></diagram>

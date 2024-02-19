@@ -1,1 +1,0 @@
-Functional Composition helps to execute parallely.
