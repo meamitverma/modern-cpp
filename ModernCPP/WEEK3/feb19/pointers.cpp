@@ -1,7 +1,7 @@
 #include<iostream>
 #include<vector>
-#include<memory>
 
+// use of reference_wrapper and get()
 
 int main() {
 
@@ -10,9 +10,6 @@ int main() {
     int *p = &i;
 
     std::cout << *p << std::endl; // not allowed according to misra guidelines
-    
-
-
 
     int a = 10;
     int b = 20;
