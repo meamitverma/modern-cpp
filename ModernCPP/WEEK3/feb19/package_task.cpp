@@ -21,11 +21,11 @@ std::packaged_task< int() > task ( []() {
 
 int main() {
 
-    std::future< int > result = task.get_future();
+    std::future< int > handleResult = task.get_future();
     std::thread( std::move(task)).detach();
     std::cout << "Waiting" << std::endl;
-    result.wait();
-    std::cout << "Done!" << " Future result is " << result.get() << std::endl;
+    handleResult.wait();
+    std::cout << "Done!" << " Future Result is " << handleResult.get() << std::endl;
     
     return 0;
 }
