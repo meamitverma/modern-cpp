@@ -71,7 +71,7 @@ class SensorManager{
             
             // read the data
             for(  const auto& sensor1 : sensors ){
-//                sensor->readData();
+                sensor1->readData();
                 sensor1->readData();
             }
             
