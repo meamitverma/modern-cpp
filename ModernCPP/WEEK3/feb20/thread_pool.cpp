@@ -91,10 +91,6 @@ class ThreadPool{
         }
     }  //~ThreadPool closing
     
-   
-   
- 
-    
 }; // End of the ThreadPool
 
 int main(int argc, const char * argv[]) {
