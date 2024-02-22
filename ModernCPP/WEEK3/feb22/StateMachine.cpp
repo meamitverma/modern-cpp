@@ -6,7 +6,7 @@ class StateMachine{
     std::tuple<States...> states;
  
     public:
-    StateMachine(States... args): states( std::make_tuple(std::move(args)...)){}
+    StateMachine(States... args) : states( std::make_tuple(std::move(args)...)){}
  
     void displayVariousStates(){
         std::cout<< "States..." << std::endl;

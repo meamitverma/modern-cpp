@@ -11,7 +11,7 @@ struct TransactionTo {
 struct Machine {
     template< typename State >
     void transactionTo() {
-        std::cout << "Is transaction with state : " << typeid( State ).name() << std::endl;
+        std::cout << "Is transaction with state : ";
     }
 };
 
