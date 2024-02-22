@@ -1,25 +1,19 @@
 #include<bits/stdc++.h>
+#include<memory>
+
 using namespace std;
 
-template<typename T>
-requires requires(T value) {
-    {value.incement()}->same_as<void>;}
-    void performAction(T value) {
-        value.increment();
-    }
+class A {
 
-    class MyClass{
-        public:
-        void increment(){
-            cout << "Incrementing...";
-        }
-    };
-
-
+};
+void fun(int a){
+    cout<<"---"<<a;
+}
 int main() {
-
-    MyClass obj;
-    performAction(obj);
-    
+    // std::unique_ptr<Foo>p2 (std::move(p1));
+    // if(p1)p1->foo();
+    // auto i{10};
+    auto say{fun}; say(10);
+    // cout<<i;
     return 0;
 }
