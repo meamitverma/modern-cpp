@@ -33,6 +33,48 @@ int main () {
 /*
 
 #include <iostream>
+#include <future>
+#include <vector>
+#include <algorithm>
+
+int main() {
+    // Function to perform some computation
+    auto compute = [](int x) {
+        // Simulating some time-consuming task
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        return x * x;
+    };
+
+    // Create a vector of integers
+    std::vector<int> data = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+    // Use async to perform computation in parallel
+    std::vector<std::future<int>> futures;
+    for (int x : data) {
+        futures.push_back(std::async(std::launch::async, compute, x));
+    }
+
+    // Wait for all async tasks to finish and retrieve results
+    std::vector<int> results;
+    for (auto& future : futures) {
+        results.push_back(future.get());
+    }
+
+    // Display results
+    std::cout << "Original data: ";
+    for (int x : data) {
+        std::cout << x << " ";
+    }
+
+    std::cout << "\nSquared values: ";
+    for (int result : results) {
+        std::cout << result << " ";
+    }
+
+    return 0;
+}
+
+#include <iostream>
 #include<future>
 
 using namespace std::chrono;
